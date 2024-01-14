@@ -1,5 +1,5 @@
 # cse210-ww-student-template
-Karla Rummler
+Karla Rummler 
 
 This repository contains the starter code for many different projects. They are arranged as follows:
 

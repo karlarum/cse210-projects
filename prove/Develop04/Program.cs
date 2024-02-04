@@ -8,7 +8,7 @@ class Program
     {
         int choice = 0;
 
-        while (choice != 4)
+        while (choice != 5)
         {
             DisplayMenu();
 
@@ -21,7 +21,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("Please choose a number between 1-4");
+                Console.WriteLine("Please choose a number between 1-5");
             }
         }
     }
@@ -29,10 +29,11 @@ class Program
     static void DisplayMenu()
     {
         Console.WriteLine("Menu Options:");
-        Console.WriteLine("1. Start breathing activity");
-        Console.WriteLine("2. Start reflecting activity");
-        Console.WriteLine("3. Start listing activity");
-        Console.WriteLine("4. Quit");
+        Console.WriteLine("1. Start Breathing Activity");
+        Console.WriteLine("2. Start Reflecting Activity");
+        Console.WriteLine("3. Start Listing Activity");
+        Console.WriteLine("4. Start Stretching Activity");
+        Console.WriteLine("5. Quit");
     }
 
     static void ProcessChoice(int choice)
@@ -66,6 +67,14 @@ class Program
                 listingActivity.Run();
                 break;
             case 4:
+                StretchingActivity stretchingActivity = new StretchingActivity(
+                    "Stretching Activity",
+                    @"This activity will help you lower your cardiovascular risk and improve life expectancy.",
+                    0
+                );
+                stretchingActivity.Run();
+                break;
+            case 5:
                 Environment.Exit(0);
                 break;
         }

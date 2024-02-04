@@ -5,7 +5,6 @@ public class BreathingActivity : Activity
     public BreathingActivity(string name, string description, int duration)
         : base(name, description, duration)
     {
-        //dont know what to put here
     }
 
     public void Run()

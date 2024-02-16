@@ -19,10 +19,6 @@ namespace GoalTracker
         public override void Display()
         {
             int updatedCompleted = _amountCompleted;
-            // if (!_isComplete)
-            // {
-            //     updatedCompleted++;
-            // }
             Console.WriteLine($"{CompletedCheckbox()} Goal: {_name} ({_description}) -- Currently Completed: {updatedCompleted}/{_target}");
         }
 

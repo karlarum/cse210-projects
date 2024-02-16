@@ -27,9 +27,5 @@ namespace GoalTracker
         {
             return $"SimpleGoal| {_name} | {_description} | {_points} | {_isComplete}";
         }
-
-        // SaveGoal
-        // return "SimpleGoal| name | description | point | isComplete " 
-        //["Simple", "name", "description", "point", "is" ]
-}
+    }
 }

@@ -84,7 +84,6 @@ namespace GoalTracker
                         int.TryParse(Console.ReadLine(), out bonus);
                         _goals.Add(new CheckListGoal(name, description, points, isComplete, target, bonus));
                         break;
-                    //added this to see if it would load menu after user inputs information
                     default:
                         Console.WriteLine("Please enter a number 1-3");
                         break;
@@ -131,9 +130,6 @@ namespace GoalTracker
             {
                 foreach (Goal goal in _goals)
                 {
-                    // Saving Edited for testing purpose. (GetType removed)
-                    //outputFile.WriteLine(goal.GetType().FullName);
-                    //outputFile.WriteLine(goal.GetDetailsString());
                     outputFile.WriteLine(goal.SaveGoal());
                 }
             }
@@ -148,7 +144,7 @@ namespace GoalTracker
 
             foreach (string line in lines)
             {
-                string[] parts = line.Split('|'); // GoalTracker.SimpleGoal | [ ] | Goal | drink water, Description: | drink more water, Points: | 10
+                string[] parts = line.Split('|');
                 if(parts[0] == "SimpleGoal")
                 {
                     SimpleGoal goal = new(parts[1], parts[2], int.Parse(parts[3]), bool.Parse(parts[4]));
@@ -165,7 +161,6 @@ namespace GoalTracker
                     CheckListGoal goal = new(parts[1], parts[2], int.Parse(parts[3]), bool.Parse(parts[4]), int.Parse(parts[5]), int.Parse(parts[6]));
                     _goals.Add(goal);
                 }
-                //testing to see if this will load menu after user input
                 else
                 {
                     Console.WriteLine("---test---");

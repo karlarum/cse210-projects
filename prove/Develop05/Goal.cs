@@ -55,8 +55,6 @@ namespace GoalTracker
 
        public virtual string GetDetailsString()
        {
-            //original
-            //return $"{CompletedCheckbox()} Goal: {_name}, Description: {_description}, Points: {_points}";
             return $"{CompletedCheckbox()} {SaveGoal()}";
        }
 
